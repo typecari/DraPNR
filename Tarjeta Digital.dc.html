@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-386cdf1a-16ad-48c1-b75a-badb05014f3a/styles.css">
+<script src="_ds/modernist-386cdf1a-16ad-48c1-b75a-badb05014f3a/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700&amp;family=Cormorant+Garamond:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin: 0; background: var(--ground, #ffffff); font-family: Archivo, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  h1 { font-family: "Playfair Display", Georgia, serif; }
+  a { color: var(--acc, #700C48); text-decoration: none; }
+  a:hover { color: var(--acc-deep, #520834); }
+  ::selection { background: var(--acc, #700C48); color: #fff; }
+  :focus-visible { outline: 2px solid var(--acc, #700C48); outline-offset: 3px; }
+</style>
+</helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect width="120" height="120" fill="#520834"/><text x="36" y="72" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#ffffff">PR</text></svg></template>
+
+<div ref="{{ root }}" data-screen-label="Digital card" style="min-height:100vh; background:var(--ground,#ffffff); color:var(--ink,#201e1d); display:flex; justify-content:center; padding:0 0 48px; font-family:Archivo, system-ui, sans-serif;">
+  <div style="width:100%; max-width:430px; display:flex; flex-direction:column;">
+
+    <div hidden="{{ hidePortrait }}" style="width: 414px; aspect-ratio: 1 / 1; overflow: hidden; background: var(--acc,#700C48); height: 239px">
+      
+    <img src="./images/tarjeta-presentacion.png" alt="Paula Natalia Rodríguez" style="display: block; width: 415px; height: 241px; object-fit: cover; object-position: 50% 12%"></div>
+
+    
+
+    <div style="padding:32px 28px 0; display:flex; flex-direction:column; gap:10px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        
+        
+      <p style="margin:0; font-family:'Cormorant Garamond', Georgia, serif; font-variant:small-caps; font-size:15px; font-weight:600; letter-spacing:0.05em; line-height:1.3; color:var(--muted,#6b6664);">Universidad Industrial de Santander</p></div><a href="assets/paula-rodriguez.vcf" download="Paula-Natalia-Rodriguez.vcf" style="background:var(--acc,#700C48); color:#fff; border:2px solid var(--acc,#700C48); padding:20px 22px; font-size:15px; font-weight:700; letter-spacing:0.04em; min-height:62px; display:flex; align-items:center;" style-hover="{{ ctaHover }}"><span hidden="{{ hideEs }}">Guardar contacto</span><span hidden="{{ hideEn }}">Save contact</span></a>
+      <a href="https://wa.me/573155529877?text=Hola%20Paula%2C%20quiero%20agendar%20una%20valoraci%C3%B3n." target="_blank" rel="noopener" style="color:var(--ink,#201e1d); border:2px solid var(--ink,#201e1d); padding:18px 22px; font-size:15px; font-weight:700; letter-spacing:0.04em; min-height:58px; display:flex; align-items:center;" style-hover="{{ inkHover }}"><span hidden="{{ hideEs }}">Escribir por WhatsApp</span><span hidden="{{ hideEn }}">Message on WhatsApp</span></a>
+      
+    </div>
+
+    <div hidden="{{ hideQr }}" style="padding:36px 28px 0;">
+      <div style="border-top:2px solid var(--rule,#201e1d); padding-top:24px; display:flex; gap:20px; align-items:center;">
+        <img src="images/qr-code.png" alt="Código QR — contacto de Paula Natalia Rodríguez" style="display:block; width:116px; height:116px; image-rendering:pixelated; background:#fff; padding:6px; box-sizing:border-box;">
+        <p style="margin:0; font-size:14px; line-height:1.5; color:var(--muted,#6b6664); min-width:0;"><span hidden="{{ hideEs }}">Escanea este código para guardar el contacto en tu teléfono.</span><span hidden="{{ hideEn }}">Scan this code to save the contact on your phone.</span></p>
+      </div>
+    </div>
+
+    <div hidden="{{ hideCredential }}" style="padding:28px 28px 0;">
+      
+    </div><div style="padding: 32px 28px 0; width: 434px; height: 44px">
+      
+    <button onClick="{{ toggleLang }}" style="font-family:inherit; cursor:pointer; background:transparent; border:2px solid var(--rule,#201e1d); color:var(--ink,#201e1d); padding:11px 16px; font-size:11px; font-weight:700; letter-spacing:0.16em; min-height:44px;" style-hover="{{ inkHover }}">{{ langLabel }}</button></div>
+
+    
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:430,&quot;height&quot;:932},&quot;colorScheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;light&quot;,&quot;dark&quot;],&quot;default&quot;:&quot;light&quot;,&quot;tsType&quot;:&quot;'light' | 'dark'&quot;,&quot;section&quot;:&quot;Appearance&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;options&quot;:[&quot;#700C48&quot;,&quot;#520834&quot;,&quot;#8E3C6F&quot;,&quot;#201e1d&quot;],&quot;default&quot;:&quot;#700C48&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Appearance&quot;},&quot;showPortrait&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showQr&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;showCredential&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;defaultLang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;es&quot;,&quot;en&quot;],&quot;default&quot;:&quot;es&quot;,&quot;tsType&quot;:&quot;'es' | 'en'&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  root = React.createRef();
+
+  constructor(props) {
+    super(props);
+    this.state = { lang: props.defaultLang === 'en' ? 'en' : 'es' };
+  }
+
+  theme() {
+    const acc = this.props.accent || '#700C48';
+    const dark = (this.props.colorScheme || 'light') === 'dark';
+    return {
+      '--acc': acc,
+      '--acc-deep': dark ? '#EFD2E1' : '#520834',
+      '--ground': dark ? acc : '#ffffff',
+      '--ink': dark ? '#ffffff' : '#201e1d',
+      '--muted': dark ? 'rgba(255,255,255,0.78)' : '#6b6664',
+      '--rule': dark ? 'rgba(255,255,255,0.55)' : '#201e1d'
+    };
+  }
+
+  applyTheme() {
+    const el = this.root.current;
+    if (!el) return;
+    const t = this.theme();
+    Object.keys(t).forEach(k => {
+      el.style.setProperty(k, t[k]);
+      document.body.style.setProperty(k, t[k]);
+    });
+  }
+
+  componentDidMount() { this.applyTheme(); }
+  componentDidUpdate() { this.applyTheme(); }
+
+  renderVals() {
+    const es = this.state.lang === 'es';
+    const dark = (this.props.colorScheme || 'light') === 'dark';
+    const acc = this.props.accent || '#700C48';
+    return {
+      root: this.root,
+      hideEs: !es,
+      hideEn: es,
+      langLabel: es ? 'EN' : 'ES',
+      toggleLang: () => this.setState(s => ({ lang: s.lang === 'es' ? 'en' : 'es' })),
+      hidePortrait: this.props.showPortrait === false,
+      hideQr: this.props.showQr === false,
+      hideCredential: this.props.showCredential === false,
+      ctaHover: dark ? { background: '#fff', color: acc, borderColor: '#fff' } : { background: '#520834', borderColor: '#520834' },
+      inkHover: dark ? { background: 'rgba(255,255,255,0.16)' } : { background: '#201e1d', color: '#fff' }
+    };
+  }
+}
+</script>
+</body>
+</html>

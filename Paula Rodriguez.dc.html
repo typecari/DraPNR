@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/modernist-386cdf1a-16ad-48c1-b75a-badb05014f3a/styles.css">
+<script src="_ds/modernist-386cdf1a-16ad-48c1-b75a-badb05014f3a/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&amp;family=Playfair+Display:wght@500;600;700;800&amp;family=Cormorant+Garamond:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  h1, h2, h3, blockquote { font-family: "Playfair Display", Georgia, serif; }
+  a, button { transition: background-color .5s cubic-bezier(.16,1,.3,1), color .5s cubic-bezier(.16,1,.3,1), border-color .5s cubic-bezier(.16,1,.3,1), opacity .5s cubic-bezier(.16,1,.3,1); }
+  [data-reveal] { will-change: opacity, transform; }
+  @media (prefers-reduced-motion: reduce) { [data-reveal] { opacity: 1 !important; transform: none !important; } }
+  body { margin: 0; background: #f3f2f2; color: #201e1d; font-family: Archivo, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  a { color: #700C48; text-decoration: none; }
+  a:hover { color: #520834; }
+  ::selection { background: #700C48; color: #fff; }
+  :focus-visible { outline: 2px solid #700C48; outline-offset: 2px; }
+  [data-m="photogrid"], [data-m="photo-extra"] { grid-template-columns: minmax(0,1fr); min-width: 0; }
+  [data-m="photogrid"] > *, [data-m="photo-extra"] > * { min-width: 0; }
+  @media (min-width: 761px) {
+    [data-m="photogrid"] { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  }
+  @media (max-width: 760px) {
+    [data-m="navlinks"] { display: none !important; }
+    [data-m="sec"] { padding: 38px 18px !important; }
+    [data-m="hero-text"] { padding: 34px 18px 28px !important; gap: 14px !important; }
+    [data-m="hero-art"] { min-height: 260px !important; }
+    [data-m="hours"] { display: none !important; }
+    [data-m="hours-line"] { display: block !important; }
+    [data-m="photogrid"] { grid-template-columns: 1fr !important; }
+    [data-m="photo-extra"] { display: none !important; }
+    [data-m="photo-main"] { height: 190px !important; }
+    [data-m="svc-grid"] { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+    [data-m="svc-cell"] { padding: 12px 11px !important; }
+    [data-m="svc-cell"] h3 { font-size: 16px !important; line-height: 1.15 !important; }
+    [data-m="contact-qr"] { display: none !important; }
+    [data-m="facts"] { grid-template-columns: repeat(3, minmax(0,1fr)) !important; }
+    [data-m="fact"] { padding: 12px 10px !important; }
+    [data-m="fact"] p:first-child { font-size: 17px !important; }
+    [data-m="fact"] p:last-child { font-size: 9px !important; letter-spacing: 0.1em !important; }
+    [data-m="hero-art"] { min-height: 220px !important; }
+    [data-m="sec"] h2 { font-size: 24px !important; }
+    [data-m="cta-head"] { padding: 11px 13px !important; font-size: 11px !important; min-height: 40px !important; }
+  }
+</style>
+</helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect width="120" height="120" fill="#700C48"/><text x="36" y="72" font-family="Georgia, serif" font-size="34" font-weight="700" fill="#ffffff">PR</text></svg></template>
+
+<div style="width:100%; overflow-x:hidden; font-family:Archivo, system-ui, sans-serif;">
+
+  <header style="position:sticky; top:0; z-index:50; background:#f3f2f2; border-bottom:2px solid #201e1d; display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; padding:12px 20px;">
+    <a href="#top" style="font-size:13px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; color:#201e1d;">DRA. PAULA NATALIA RODRÍGUEZ</a>
+    <nav style="display:flex; flex-wrap:wrap; gap:10px 18px; margin-left:auto; align-items:center; min-width:0; justify-content:flex-end;">
+      <a data-m="navlinks" href="#services" style="font-size:12px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#201e1d;"><span hidden="{{ hideEs }}">Servicios</span><span hidden="{{ hideEn }}">Services</span></a>
+      <a data-m="navlinks" href="#contact" style="font-size:12px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:#201e1d;"><span hidden="{{ hideEs }}">Contacto</span><span hidden="{{ hideEn }}">Contact</span></a>
+      <button onClick="{{ toggleLang }}" style="font-family:inherit; cursor:pointer; background:none; border:2px solid #201e1d; color:#201e1d; padding:8px 12px; font-size:11px; font-weight:800; letter-spacing:0.14em; min-height:36px;" style-hover="{{ darkHover }}">{{ langLabel }}</button>
+      <a href="https://wa.me/573155529877?text=Hola%20Paula%2C%20quiero%20agendar%20una%20valoraci%C3%B3n." data-m="cta-head" target="_blank" rel="noopener" style="background:#700C48; color:#fff; padding:13px 18px; font-size:12px; font-weight:800; letter-spacing:0.12em; text-transform:uppercase; border:2px solid #700C48; min-height:44px; display:flex; align-items:center;" style-hover="{{ ctaHover }}"><span hidden="{{ hideEs }}">Contactar ahora</span><span hidden="{{ hideEn }}">Contact now</span></a>
+    </nav>
+  </header>
+
+  <section id="top" data-screen-label="Hero" style="position:relative; background:#700C48; overflow:hidden; display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); align-items:stretch;">
+    <div style="position:absolute; inset:0; background-image:radial-gradient(circle at 78% 40%, #8E3C6F 0%, #700C48 58%, #520834 100%); z-index:0;"></div>
+    <div data-m="hero-text" data-reveal style="position: relative; z-index: 2; padding: 64px 24px 56px; display: flex; flex-direction: column; justify-content: center; gap: 22px; min-width: 0; width: 545px; height: 539px">
+      <span style="font-size:11px; font-weight:800; letter-spacing:0.26em; text-transform:uppercase; color:#EFD2E1;"><span hidden="{{ hideEs }}">Bucaramanga y Área metropolitana</span><span hidden="{{ hideEn }}">Bucaramanga &amp; metropolitan area</span></span>
+      <h1 style="margin:0; font-size:clamp(30px,5.6vw,76px); line-height:0.98; font-weight:800; letter-spacing:-0.02em; color:#fff;">PAULA NATALIA<br>RODRÍGUEZ</h1>
+      <div style="height:2px; background:#EFD2E1;"></div>
+      <p style="margin:0; font-size:clamp(13px,1.4vw,17px); font-weight:700; letter-spacing:0.22em; text-transform:uppercase; color:#fff;">Fisioterapeuta</p>
+      <p style="margin:0; max-width:480px; font-size:clamp(15px,1.5vw,19px); line-height:1.5; color:#F7E9F0; text-wrap:pretty;"><span hidden="{{ hideEs }}">Valoración, rehabilitación y entrenamiento funcional en la comodidad de su casa. Un plan único por paciente.</span><span hidden="{{ hideEn }}">Assessment, rehabilitation and functional training in the comfort of your home. One plan per patient, and only theirs.</span></p>
+      <div style="display:flex; flex-wrap:wrap; gap:12px; padding-top:4px;">
+        <a href="https://wa.me/573155529877?text=Hola%20Paula%2C%20quiero%20agendar%20una%20valoraci%C3%B3n." target="_blank" rel="noopener" style="background:#fff; color:#520834; padding:16px 22px; font-size:13px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; border:2px solid #fff; min-height:52px; display:flex; align-items:center;" style-hover="{{ lightHover }}"><span hidden="{{ hideEs }}">Contactar ahora</span><span hidden="{{ hideEn }}">Contact now</span></a>
+        <a href="#services" style="color:#fff; padding:16px 22px; font-size:13px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; border:2px solid #EFD2E1; min-height:52px; display:flex; align-items:center;" style-hover="{{ outlineHover }}"><span hidden="{{ hideEs }}">Ver servicios</span><span hidden="{{ hideEn }}">See services</span></a>
+      </div>
+    </div>
+    <div data-m="hero-art" style="position:relative; z-index:1; min-height:380px;">
+      <div ref="{{ heroArt }}" style="position: absolute; top: -8%; bottom: -8%; right: -2%; left: -12%; pointer-events: none; will-change: transform; width: 657px; height: 587px">
+        <img src="images/portrait.png" alt="Paula Natalia Rodríguez, fisioterapeuta" style="display:block; height:100%; width:auto; max-width:100%; margin-left:auto; mask-image:linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.3) 22%, rgba(0,0,0,0.8) 48%, #000 66%); -webkit-mask-image:linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.3) 22%, rgba(0,0,0,0.8) 48%, #000 66%);">
+      </div>
+    </div>
+  </section>
+
+  <div data-m="facts" data-reveal style="display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); border-bottom:2px solid #201e1d; background:#f3f2f2;">
+    <div data-m="fact" style="padding:20px 24px; border-right:2px solid #201e1d;">
+      <p style="margin:0; font-size:26px; font-weight:800; color:#700C48;">08</p>
+      <p style="margin:5px 0 0; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;"><span hidden="{{ hideEs }}">Especialidades clínicas</span><span hidden="{{ hideEn }}">Clinical specialties</span></p>
+    </div>
+    <div data-m="fact" style="padding:20px 24px; border-right:2px solid #201e1d;">
+      <p style="margin:0; font-size:26px; font-weight:800; color:#700C48;"><span hidden="{{ hideEs }}">Domicilio</span><span hidden="{{ hideEn }}">At home</span></p>
+      <p style="margin:5px 0 0; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;"><span hidden="{{ hideEs }}">Atención en su casa</span><span hidden="{{ hideEn }}">Visits at your home</span></p>
+    </div>
+    <div data-m="fact" style="padding:20px 24px;">
+      <p style="margin:0; font-size:26px; font-weight:800; color:#700C48;">1:1</p>
+      <p style="margin:5px 0 0; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase;"><span hidden="{{ hideEs }}">Sesiones individuales</span><span hidden="{{ hideEn }}">Individual sessions</span></p>
+    </div>
+  </div>
+
+  <section id="about" data-m="sec" data-reveal-group data-screen-label="Profile" style="background:#f3f2f2; padding:64px 24px; border-bottom:2px solid #201e1d;">
+    <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px; align-items:start;">
+      <div style="min-width:0;">
+        <p style="margin:0 0 14px; font-size:11px; font-weight:800; letter-spacing:0.26em; text-transform:uppercase; color:#700C48;"><span hidden="{{ hideEs }}">Perfil</span><span hidden="{{ hideEn }}">Profile</span></p>
+        <h2 style="margin:0 0 18px; font-size:clamp(25px,3.2vw,42px); line-height:1.05; font-weight:800; letter-spacing:-0.015em;"><span hidden="{{ hideEs }}">Movimiento como tratamiento, no como consejo.</span><span hidden="{{ hideEn }}">Movement as treatment, not as advice.</span></h2>
+        <div style="height:2px; background:#201e1d; margin-bottom:18px;"></div>
+        <p style="margin:0 0 20px; font-size:16px; line-height:1.6; text-wrap:pretty;"><span hidden="{{ hideEs }}">Fisioterapeuta egresada de la Universidad Industrial de Santander. Atiendo adultos, deportistas, población neurológica y pacientes pediátricos, en consultorio y a domicilio en Bucaramanga y su área metropolitana.</span><span hidden="{{ hideEn }}">Physiotherapist trained at the Universidad Industrial de Santander. I treat adults, athletes, neurological and paediatric patients, in clinic and at home across Bucaramanga and its metropolitan area.</span></p><p style="margin:0 0 14px; font-size:16px; line-height:1.6; text-wrap:pretty;"><span hidden="{{ hideEs }}">Acompaño a mis pacientes desde la valoración inicial para entender qué duele, por qué duele y qué se necesita para volver a moverse sin miedo.</span><span hidden="{{ hideEn }}">I walk with my patients from the first assessment: understanding what hurts, why it hurts, and what it takes to move without fear again.</span></p>
+        
+        <div style="border-top:2px solid #201e1d; padding-top:16px; display:flex; align-items:center; gap:14px;">
+          <img src="images/logo-uis-black.png" alt="Universidad Industrial de Santander" style="width:46px; height:48px; object-fit:contain;">
+          <p style="margin:0; font-family:'Cormorant Garamond', Georgia, serif; font-variant:small-caps; font-size:16px; font-weight:600; letter-spacing:0.06em; line-height:1.3; color:#4a4543;"><span hidden="{{ hideEs }}">Credencial académica</span><span hidden="{{ hideEn }}">Academic credential</span></p>
+        </div>
+        <p data-m="hours-line" style="display:none; margin:14px 0 0; font-size:13px; font-weight:700; line-height:1.5; color:#4a4543;"><span hidden="{{ hideEs }}">Lun–vie 7:00–19:00 · Sáb 8:00–13:00 · Domicilios con cita previa</span><span hidden="{{ hideEn }}">Mon–Fri 7:00–19:00 · Sat 8:00–13:00 · Home visits by appointment</span></p>
+        <div data-m="hours" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); border-top:2px solid rgba(32,30,29,0.18); margin-top:16px;">
+          <div style="padding:14px 0;">
+            <p style="margin:0; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#4a4543;"><span hidden="{{ hideEs }}">HORARIOS DE ATENCIÓN:</span><span hidden="{{ hideEn }}">Mon to Fri</span></p><p style="margin:0; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#4a4543;"><span hidden="{{ hideEs }}">Lun a vie</span><span hidden="{{ hideEn }}">Mon to Fri</span></p>
+            <p style="margin:3px 0 0; font-size:16px; font-weight:700;">7:00 a.m - 6:00 p.m.</p>
+          </div>
+          <div style="padding:14px 0;">
+            <p style="margin:0; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#4a4543;"><span hidden="{{ hideEs }}"><br>Sábado</span><span hidden="{{ hideEn }}">Saturday</span></p>
+            <p style="margin:3px 0 0; font-size:16px; font-weight:700;">8:00 a.m - 3:00 p.m.</p>
+          </div>
+          <div style="padding:14px 0;">
+            <p style="margin:0; font-size:11px; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#4a4543;"><span hidden="{{ hideEs }}"><br>Domicilios</span><span hidden="{{ hideEn }}">Home visits</span></p>
+            <p style="margin:3px 0 0; font-size:16px; font-weight:700;"><span hidden="{{ hideEs }}">Cita previa</span><span hidden="{{ hideEn }}">By appointment</span></p>
+          </div>
+        </div>
+      </div>
+      <div data-m="photogrid" style="display:grid; gap:12px; min-width:0;">
+        <div data-m="photo-main" style="border:2px solid #201e1d; height:320px; position:relative; background:#fff;">
+          <image-slot id="paula-clinic" shape="rect" radius="0" placeholder="Foto: sesión en consultorio"></image-slot>
+        </div>
+        <div data-m="photo-extra" style="display:grid; gap:12px;">
+          <div style="border:2px solid #201e1d; height:154px; position:relative; background:#fff;">
+            <image-slot id="paula-hands" shape="rect" radius="0" placeholder="Foto: terapia manual"></image-slot>
+          </div>
+          <div style="border:2px solid #201e1d; height:154px; position:relative; background:#fff;">
+            <image-slot id="paula-exercise" shape="rect" radius="0" placeholder="Foto: ejercicio terapéutico"></image-slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" data-m="sec" data-reveal-group data-screen-label="Services" style="background:#fff; padding:64px 24px; border-bottom:2px solid #201e1d;">
+    <div style="max-width:1180px; margin:0 auto;">
+      <div style="display:flex; flex-wrap:wrap; gap:16px 32px; align-items:flex-end; justify-content:space-between; margin-bottom:28px;">
+        <div style="min-width:0;">
+          <p style="margin:0 0 12px; font-size:11px; font-weight:800; letter-spacing:0.26em; text-transform:uppercase; color:#700C48;"><span hidden="{{ hideEs }}">Servicios</span><span hidden="{{ hideEn }}">Services</span></p>
+          <h2 style="margin:0; font-size:clamp(25px,3.2vw,42px); line-height:1.05; font-weight:800; letter-spacing:-0.015em; max-width:640px;"><span hidden="{{ hideEs }}">Ocho especialidades, que cumplan con las necesidades del paciente.</span><span hidden="{{ hideEn }}">Eight specialties, matched to what each patient needs.</span></h2>
+        </div>
+        <a href="https://wa.me/573155529877?text=Hola%20Paula%2C%20quiero%20agendar%20una%20valoraci%C3%B3n." target="_blank" rel="noopener" style="background:#700C48; color:#fff; padding:15px 22px; font-size:12px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; border:2px solid #700C48; min-height:50px; display:flex; align-items:center;" style-hover="{{ ctaHover }}"><span hidden="{{ hideEs }}">Consultar disponibilidad</span><span hidden="{{ hideEn }}">Ask about availability</span></a>
+      </div>
+      <div data-m="svc-grid" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); border-top:2px solid #201e1d; border-left:2px solid #201e1d;">
+        <div data-m="svc-cell" style="padding:20px 20px; border-right:2px solid #201e1d; border-bottom:2px solid #201e1d;">
+          <p style="margin:0 0 8px; font-size:11px; font-weight:800; letter-spacing:0.18em; color:#700C48;">01</p>
+          <h3 style="margin:0; font-family:'Cormorant Garamond', Georgia, serif; font-variant:small-caps; font-size:21px; font-weight:600; letter-spacing:0.02em; line-height:1.2;"><span hidden="{{ hideEs }}">Valoración y rehabilitación física</span><span hidden="{{ hideEn }}">Assessment &amp; physical rehabilitation</span></h3>
+        </div>
+        <div data-m="svc-cell" style="padding:20px 20px; border-right:2px solid #201e1d; border-bottom:2px solid #201e1d;">
+          <p style="margin:0 0 8px; font-size:11px; font-weight:800; letter-spacing:0.18em; color:#700C48;">02</p>
+          <h3 style="margin:0; font-family:'Cormorant Garamond', Georgia, serif; font-variant:small-caps; font-size:21px; font-weight:600; letter-spacing:0.02em; line-height:1.2;"><span hidden="{{ hideEs }}">Rehabilitación musculoesquelética y deportiva</span><span hidden="{{ hideEn }}">Musculoskeletal &amp; sports rehabilitation</span></h3>
+        </div>
+        <div data-m="svc-cell" style="padding:20px 20px; border-right:2px solid #201e1d; border-bottom:2px solid #201e1d;">
+          <p style="margin:0 0 8px; font-size:11px; font-weight:800; letter-spacing:0.18em; color:#700C48;">03</p>
+          <h3 style="margin:0; font-family:'Cormorant Garamond', Georgia, serif; font-variant:small-caps; font-size:21px; font-weight:600; letter-spacing:0.02em; line-height:1.2;"><span hidden="{{ hideEs }}">Rehabilitación neurológica</span><span hidden="{{ hideEn }}">Neurological rehabilitation</span></h3>
+        </div>
+        <div data-m="svc-cell" style="padding:20px 20px; border-right:2px solid #201e1d; border-bottom:2px solid #201e1d;">
+          <p style="margin:0 0 8px; font-size:11px; font-weight:800; letter-spacing:0.18em; color:#700C48;">04</p>
+          <h3 style="margin:0; font-family:'Cormorant Garamond', Georgia, serif; font-variant:small-caps; font-size:21px; font-weight:600; letter-spacing:0.02em; line-height:1.2;"><span hidden="{{ hideEs }}">Terapia respiratoria</span><span hidden="{{ hideEn }}">Respiratory therapy</span></h3>
+        </div>
+        <div data-m="svc-cell" style="padding:20px 20px; border-right:2px solid #201e1d; border-bottom:2px solid #201e1d;">
+          <p style="margin:0 0 8px; font-size:11px; font-weight:800; letter-spacing:0.18em; color:#700C48;">05</p>
+          <h3 style="margin:0; font-family:'Cormorant Garamond', Georgia, serif; font-variant:small-caps; font-size:21px; font-weight:600; letter-spacing:0.02em; line-height:1.2;"><span hidden="{{ hideEs }}">Fisioterapia pediátrica y estimulación temprana</span><span hidden="{{ hideEn }}">Paediatric physiotherapy &amp; early stimulation</span></h3>
+        </div>
+        <div data-m="svc-cell" style="padding:20px 20px; border-right:2px solid #201e1d; border-bottom:2px solid #201e1d;">
+          <p style="margin:0 0 8px; font-size:11px; font-weight:800; letter-spacing:0.18em; color:#700C48;">06</p>
+          <h3 style="margin:0; font-family:'Cormorant Garamond', Georgia, serif; font-variant:small-caps; font-size:21px; font-weight:600; letter-spacing:0.02em; line-height:1.2;"><span hidden="{{ hideEs }}">Ejercicio terapéutico y entrenamiento funcional</span><span hidden="{{ hideEn }}">Therapeutic exercise &amp; functional training</span></h3>
+        </div>
+        <div data-m="svc-cell" style="padding:20px 20px; border-right:2px solid #201e1d; border-bottom:2px solid #201e1d;">
+          <p style="margin:0 0 8px; font-size:11px; font-weight:800; letter-spacing:0.18em; color:#700C48;">07</p>
+          <h3 style="margin:0; font-family:'Cormorant Garamond', Georgia, serif; font-variant:small-caps; font-size:21px; font-weight:600; letter-spacing:0.02em; line-height:1.2;"><span hidden="{{ hideEs }}">Drenaje linfático</span><span hidden="{{ hideEn }}">Lymphatic drainage</span></h3>
+        </div>
+        <div data-m="svc-cell" style="padding:20px 20px; border-right:2px solid #201e1d; border-bottom:2px solid #201e1d; background:#F4E6EE;">
+          <p style="margin:0 0 8px; font-size:11px; font-weight:800; letter-spacing:0.18em; color:#700C48;">08</p>
+          <h3 style="margin:0; font-family:'Cormorant Garamond', Georgia, serif; font-variant:small-caps; font-size:21px; font-weight:600; letter-spacing:0.02em; line-height:1.2;"><span hidden="{{ hideEs }}">Atención domiciliaria</span><span hidden="{{ hideEn }}">Home visits</span></h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal-group data-screen-label="Testimonial" style="position:relative; overflow:hidden; border-bottom:2px solid #201e1d; background:#520834; min-height:400px;">
+    <div ref="{{ bandArt }}" style="position:absolute; inset:-14% 0; z-index:0; will-change:transform; opacity:0.55;">
+      <image-slot id="paula-band" shape="rect" radius="0" placeholder="Foto ancha: consultorio o rehabilitación"></image-slot>
+    </div>
+    <div style="position:absolute; inset:0; background:#520834; opacity:0.78; z-index:1; pointer-events:none;"></div>
+    <div style="position:relative; z-index:2; max-width:1180px; margin:0 auto; padding:56px 24px;">
+      <p style="margin:0 0 18px; font-size:11px; font-weight:800; letter-spacing:0.26em; text-transform:uppercase; color:#EFD2E1;"><span hidden="{{ hideEs }}">Pacientes</span><span hidden="{{ hideEn }}">Patients</span></p>
+      <div data-rotator style="position:relative; min-height:200px;">
+        <div data-slide style="position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-start;">
+          <blockquote style="margin:0; max-width:900px; font-size:clamp(19px,2.6vw,32px); line-height:1.35; font-weight:600; color:#fff; text-wrap:pretty;"><span hidden="{{ hideEs }}">«Llegué sin poder subir escaleras. A las seis semanas volví a correr, con un plan que entendí de principio a fin.»</span><span hidden="{{ hideEn }}">"I arrived unable to climb stairs. Six weeks later I was running again, with a plan I understood from start to finish."</span></blockquote>
+          <p style="margin:18px 0 0; font-size:11px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#EFD2E1;">Andrés M. · <span hidden="{{ hideEs }}">Rehabilitación de rodilla</span><span hidden="{{ hideEn }}">Knee rehabilitation</span></p>
+        </div>
+        <div data-slide style="position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-start;">
+          <blockquote style="margin:0; max-width:900px; font-size:clamp(19px,2.6vw,32px); line-height:1.35; font-weight:600; color:#fff; text-wrap:pretty;"><span hidden="{{ hideEs }}">«Atendió a mi mamá en casa después del ACV. Paciencia, orden y avances que vimos semana a semana.»</span><span hidden="{{ hideEn }}">"She treated my mother at home after her stroke. Patience, order, and progress we could see week by week."</span></blockquote>
+          <p style="margin:18px 0 0; font-size:11px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#EFD2E1;">Clara R. · <span hidden="{{ hideEs }}">Rehabilitación neurológica</span><span hidden="{{ hideEn }}">Neurological rehabilitation</span></p>
+        </div>
+        <div data-slide style="position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-start;">
+          <blockquote style="margin:0; max-width:900px; font-size:clamp(19px,2.6vw,32px); line-height:1.35; font-weight:600; color:#fff; text-wrap:pretty;"><span hidden="{{ hideEs }}">«Explica cada ejercicio y por qué lo hacemos. Es la primera vez que sostengo una rutina más de un mes.»</span><span hidden="{{ hideEn }}">"She explains every exercise and why we do it. It is the first time I have kept a routine going past a month."</span></blockquote>
+          <p style="margin:18px 0 0; font-size:11px; font-weight:800; letter-spacing:0.16em; text-transform:uppercase; color:#EFD2E1;">Laura V. · <span hidden="{{ hideEs }}">Dolor lumbar</span><span hidden="{{ hideEn }}">Low back pain</span></p>
+        </div>
+      </div>
+      <div style="display:flex; gap:10px; margin-top:26px;">
+        <button data-dot onClick="{{ go0 }}" aria-label="Testimonio 1" style="width:52px; height:44px; padding:0; cursor:pointer; background:transparent; border:0; display:flex; align-items:center; justify-content:flex-start;"><span style="display:block; width:26px; height:2px; background:#EFD2E1;"></span></button>
+        <button data-dot onClick="{{ go1 }}" aria-label="Testimonio 2" style="width:52px; height:44px; padding:0; cursor:pointer; background:transparent; border:0; display:flex; align-items:center; justify-content:flex-start;"><span style="display:block; width:26px; height:2px; background:#EFD2E1;"></span></button>
+        <button data-dot onClick="{{ go2 }}" aria-label="Testimonio 3" style="width:52px; height:44px; padding:0; cursor:pointer; background:transparent; border:0; display:flex; align-items:center; justify-content:flex-start;"><span style="display:block; width:26px; height:2px; background:#EFD2E1;"></span></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" data-m="sec" data-reveal-group data-screen-label="Contact" style="position:relative; background:#700C48; padding:64px 24px; overflow:hidden;">
+    <div ref="{{ contactArt }}" style="position:absolute; inset:-20% -10%; z-index:0; opacity:0.14; background-image:url('images/portrait.png'); background-size:cover; background-position:center; will-change:transform; filter:grayscale(1); mask-image:linear-gradient(90deg, transparent 0%, #000 65%); -webkit-mask-image:linear-gradient(90deg, transparent 0%, #000 65%);"></div>
+    <div style="position:relative; z-index:1; max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:40px; align-items:start;">
+      <div style="min-width:0;">
+        <p style="margin:0 0 14px; font-size:11px; font-weight:800; letter-spacing:0.26em; text-transform:uppercase; color:#EFD2E1;"><span hidden="{{ hideEs }}">Contacto</span><span hidden="{{ hideEn }}">Contact</span></p>
+        <h2 style="margin:0 0 18px; font-size:clamp(27px,3.8vw,50px); line-height:1.03; font-weight:800; letter-spacing:-0.02em; color:#fff;"><span hidden="{{ hideEs }}">Escríbeme y agendamos la valoración.</span><span hidden="{{ hideEn }}">Message me and we will book your assessment.</span></h2>
+        <div style="height:2px; background:#EFD2E1; margin-bottom:20px;"></div>
+        <p style="margin:0 0 24px; font-size:16px; line-height:1.55; color:#F7E9F0;">Bucaramanga, Floridablanca, Girón, Piedecuesta.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px;">
+          <a href="https://wa.me/573155529877?text=Hola%20Paula%2C%20quiero%20agendar%20una%20valoraci%C3%B3n." target="_blank" rel="noopener" style="background:#fff; color:#520834; padding:17px 24px; font-size:13px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; border:2px solid #fff; min-height:54px; display:flex; align-items:center;" style-hover="{{ lightHover }}"><span hidden="{{ hideEs }}">Contactar ahora por WhatsApp</span><span hidden="{{ hideEn }}">Contact now on WhatsApp</span></a>
+          <a href="Tarjeta%20Digital.dc.html" style="color:#fff; padding:17px 24px; font-size:13px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; border:2px solid #EFD2E1; min-height:54px; display:flex; align-items:center;" style-hover="{{ outlineHover }}"><span hidden="{{ hideEs }}">Tarjeta digital</span><span hidden="{{ hideEn }}">Digital card</span></a>
+        </div>
+      </div><div data-m="contact-qr" style="border:2px solid #fff; background:#fff; padding:22px; display:flex; flex-direction:column; gap:14px; max-width:340px;">
+        <a href="assets/paula-rodriguez.vcf" download="Paula-Natalia-Rodriguez.vcf" style="color:#201e1d; padding:15px 18px; font-size:12px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase; border:2px solid #201e1d; min-height:50px; display:flex; align-items:center;" style-hover="{{ darkHover }}"><span hidden="{{ hideEs }}">Guardar contacto</span><span hidden="{{ hideEn }}">Save contact</span></a><img src="images/qr-code.png" alt="Código QR de la tarjeta digital" style="display:block; width:100%; height:auto; image-rendering:pixelated;"><p style="margin:0; font-size:11px; font-weight:800; letter-spacing:0.18em; text-transform:uppercase; color:#700C48;"><span hidden="{{ hideEs }}"></span><span hidden="{{ hideEn }}">Save her contact</span></p>
+        
+        
+      </div>
+      
+    </div>
+  </section>
+
+  <footer style="background:#201e1d; color:#f3f2f2; padding:26px 24px; display:flex; flex-wrap:wrap; gap:14px 20px; align-items:center;">
+    <img src="images/logo-uis-white.png" alt="Universidad Industrial de Santander" style="width: 69px; height: 71px; object-fit: contain; opacity: 0.85"><p style="margin:0; font-size:11px; font-weight:800; letter-spacing:0.14em; text-transform:uppercase;">Paula Natalia Rodríguez · Fisioterapeuta</p>
+    <div style="display:flex; align-items:center; gap:8px;">
+      
+    </div>
+    <p style="margin:0 0 0 auto; font-size:11px; color:#b7b2af;">© 2026 · Bucaramanga, Colombia</p>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { lang: 'es' };
+
+  heroArt = React.createRef();
+  bandArt = React.createRef();
+  contactArt = React.createRef();
+
+  componentDidMount() {
+    this.layers = [[this.heroArt, 70, 0], [this.bandArt, 100, 0], [this.contactArt, 80, 0]];
+    this.raf = null;
+    this.tick = () => {
+      const vh = window.innerHeight || 1;
+      let moving = false;
+      for (const item of this.layers) {
+        const el = item[0].current;
+        if (!el || !el.parentElement) continue;
+        const r = el.parentElement.getBoundingClientRect();
+        if (r.bottom < -vh || r.top > vh * 2) continue;
+        const p = (r.top - vh) / (vh + r.height);
+        const target = -p * item[1];
+        item[2] += (target - item[2]) * 0.12;
+        if (Math.abs(target - item[2]) > 0.2) moving = true;
+        el.style.transform = 'translate3d(0,' + item[2].toFixed(2) + 'px,0)';
+      }
+      this.raf = moving || this.pumping ? requestAnimationFrame(this.tick) : null;
+      this.pumping = false;
+    };
+    this.pump = () => {
+      this.pumping = true;
+      if (!this.raf) this.raf = requestAnimationFrame(this.tick);
+    };
+    window.addEventListener('scroll', this.pump, { passive: true });
+    window.addEventListener('resize', this.pump);
+
+    const ease = 'cubic-bezier(.16,1,.3,1)';
+    const prep = (el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translate3d(0,26px,0)';
+      el.style.transition = 'opacity 1s ' + ease + ' ' + (i * 90) + 'ms, transform 1.1s ' + ease + ' ' + (i * 90) + 'ms';
+    };
+    const items = [];
+    this.root && null;
+    document.querySelectorAll('[data-reveal]').forEach(el => items.push([el, 0]));
+    document.querySelectorAll('[data-reveal-group]').forEach(group => {
+      const kids = Array.from(group.children).filter(k => k.getBoundingClientRect().height > 0 && getComputedStyle(k).position !== 'absolute');
+      const list = kids.length > 1 ? kids : [group];
+      list.forEach((el, i) => items.push([el, i]));
+    });
+    items.forEach(pair => { pair[0].setAttribute('data-reveal', ''); prep(pair[0], pair[1]); });
+    this.io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translate3d(0,0,0)';
+        this.io.unobserve(e.target);
+      });
+    }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 });
+    items.forEach(pair => this.io.observe(pair[0]));
+    this.pump();
+
+    const rot = document.querySelector('[data-rotator]');
+    if (rot) {
+      this.slides = Array.from(rot.querySelectorAll('[data-slide]'));
+      this.dots = Array.from(document.querySelectorAll('[data-dot]'));
+      this.slides.forEach(el => {
+        el.style.transition = 'opacity 1s cubic-bezier(.16,1,.3,1), transform 1.1s cubic-bezier(.16,1,.3,1)';
+      });
+      this.paint = () => {
+        this.slides.forEach((el, i) => {
+          const on = i === this.slide;
+          el.style.opacity = on ? '1' : '0';
+          el.style.transform = on ? 'translate3d(0,0,0)' : 'translate3d(0,14px,0)';
+          el.style.pointerEvents = on ? 'auto' : 'none';
+        });
+        this.dots.forEach((d, i) => {
+          const bar = d.firstElementChild;
+          if (!bar) return;
+          bar.style.transition = 'width .6s cubic-bezier(.16,1,.3,1), opacity .6s cubic-bezier(.16,1,.3,1)';
+          bar.style.width = i === this.slide ? '44px' : '26px';
+          bar.style.opacity = i === this.slide ? '1' : '0.45';
+        });
+      };
+      this.slide = 0;
+      this.paint();
+      this.startRotation = () => {
+        clearInterval(this.timer);
+        this.timer = setInterval(() => {
+          this.slide = (this.slide + 1) % this.slides.length;
+          this.paint();
+        }, 6500);
+      };
+      rot.addEventListener('pointerenter', () => clearInterval(this.timer));
+      rot.addEventListener('pointerleave', () => this.startRotation());
+      this.startRotation();
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.pump);
+    window.removeEventListener('resize', this.pump);
+    if (this.raf) cancelAnimationFrame(this.raf);
+    clearInterval(this.timer);
+    if (this.io) this.io.disconnect();
+  }
+
+  goTo(i) {
+    if (!this.slides) return;
+    this.slide = i;
+    this.paint();
+    this.startRotation();
+  }
+
+  renderVals() {
+    const es = this.state.lang === 'es';
+    return {
+      hideEs: !es,
+      hideEn: es,
+      langLabel: es ? 'EN' : 'ES',
+      toggleLang: () => this.setState(s => ({ lang: s.lang === 'es' ? 'en' : 'es' })),
+      go0: () => this.goTo(0),
+      go1: () => this.goTo(1),
+      go2: () => this.goTo(2),
+      heroArt: this.heroArt,
+      bandArt: this.bandArt,
+      contactArt: this.contactArt,
+      ctaHover: { background: '#520834', borderColor: '#520834' },
+      lightHover: { background: '#EFD2E1', borderColor: '#EFD2E1' },
+      outlineHover: { background: 'rgba(255,255,255,0.14)' },
+      darkHover: { background: '#201e1d', color: '#f3f2f2' }
+    };
+  }
+}
+</script>
+</body>
+</html>
