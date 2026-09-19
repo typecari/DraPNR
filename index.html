@@ -218,6 +218,7 @@ body.lang-en .es{ display:none; }
 .photo-main{ height:320px; }
 .photo-extra{ display:grid; gap:12px; }
 .photo-extra > div{ height:154px; }
+.photo-main img, .photo-extra > div img{ width:100%; height:100%; object-fit:cover; }
 @media (min-width:761px){ .photo-grid{ grid-template-columns:1fr 1fr; } }
 
 /* ══════════════════════════════════════════════════════════════
@@ -447,12 +448,12 @@ body.lang-en .es{ display:none; }
     <!-- No real clinic photos yet — swap these placeholder boxes for
          <img src="images/your-photo.jpg"> whenever photos are ready. -->
     <div class="photo-grid">
-      <div class="photo-main"><span class="es">Foto: sesión en consultorio</span><span class="en">Photo: clinic session</span></div>
-      <div class="photo-extra">
-        <div><span class="es">Foto: terapia manual</span><span class="en">Photo: manual therapy</span></div>
-        <div><span class="es">Foto: ejercicio terapéutico</span><span class="en">Photo: therapeutic exercise</span></div>
-      </div>
-    </div>
+  <div class="photo-main"><img src="images/clinic-session.jpg" alt="Sesión en consultorio"></div>
+  <div class="photo-extra">
+    <div><img src="images/manual-therapy.jpg" alt="Terapia manual"></div>
+    <div><img src="images/therapeutic-exercise.jpg" alt="Ejercicio terapéutico"></div>
+  </div>
+</div>
   </div>
 </section>
 
