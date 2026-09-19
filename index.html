@@ -166,7 +166,7 @@ body.lang-en .es{ display:none; }
 /* The portrait: a simple relatively-positioned box that always
    fills its grid column, at whatever size that column happens to
    be — no fixed pixel dimensions anywhere. */
-.hero-art{ position:relative; z-index:1; min-height:380px; }
+.hero-art{ position:relative; z-index:1; min-height:380px; overflow:hidden; }
 .hero-art img{
   position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:20% center;
   mask-image:linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.35) 20%, #000 55%);
@@ -321,7 +321,7 @@ body.lang-en .es{ display:none; }
   .nav-link{ display:none; }                 /* keeps the header from wrapping to 3 lines on a phone */
   .sec{ padding:38px 18px; }
   .hero-text{ padding:34px 18px 28px; gap:14px; }
-  .hero-art{ min-height:220px; }
+ .hero-art{ min-height:220px; height:220px; overflow:hidden; }
   .hours{ display:none; }
   .hours-line{ display:block; }
   .svc-grid{ grid-template-columns:repeat(2, minmax(0,1fr)); }
