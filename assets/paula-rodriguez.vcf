@@ -5,8 +5,12 @@ N:Rodríguez;Dra. Paula Natalia;;;
 FN:Dra. Paula Natalia Rodríguez
 ORG:Fisioterapeuta;
 TITLE:UIS
+EMAIL;type=INTERNET;type=WORK;type=pref:ft.paulanrodriguez@gmail.com
 TEL;type=CELL;type=VOICE;type=pref:(315) 552-9877
 NOTE:Servicios (atención domiciliaria):\n\n• Valoración y rehabilitación física \n• Rehabilitación musculoesquelética y deportiva\n• Rehabilitación neurológica\n• Terapia respiratoria\n• Fisioterapia pediátrica y estimulación temprana\n• Ejercicio terapéutico y entrenamiento funcional\n• Drenaje linfático\n
+URL;type=WORK;type=pref:https://typecari.github.io/DraPNR/
+item1.IMPP;X-SERVICE-TYPE=WhatsApp;type=pref:x-apple:Ft.PaulaRodriguez
+item1.X-ABLabel:WhatsApp
 PHOTO;ENCODING=b:AAAAJGZ0eXBoZWljAAAAAG1pZjFNaVBybWlhZk1pSEJoZWljAAABhG1ldG
  EAAAAAAAAAIWhkbHIAAAAAAAAAAHBpY3QAAAAAAAAAAAAAAAAAAAAAJGRpbmYAAAAcZHJlZgAA
  AAAAAAABAAAADHVybCAAAAABAAAADnBpdG0AAAAAAAEAAAAjaWluZgAAAAAAAQAAABVpbmZlAg
